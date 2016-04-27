@@ -5,10 +5,10 @@ build:
 	python setup.py sdist bdist_wheel
 
 release-test: clean build
-	twine upload -r pypitest dist/aws-auth-helper-*
+	twine upload -r pypitest dist/findawspeers-*
 
 release: clean build
-	twine upload -r pypi dist/aws-auth-helper-*
+	twine upload -r pypi dist/findawspeers-*
 
 test: clean
 	tox

@@ -27,12 +27,12 @@ class FindAwsPeers(object):
                                    'run on.'
                                ),
                                default=None)
-        argparser.add_argument('--filters',
-                               help=(
-                                   'Filter instances based on tags. If not specified, autoscaling groups will be used'
-                                   ' as the filter.'
-                               ),
-                               default=None)
+        # argparser.add_argument('--filters',
+        #                        help=(
+        #                            'Filter instances based on tags. If not specified, autoscaling groups will be used'
+        #                            ' as the filter.'
+        #                        ),
+        #                        default=None)
         argparser.add_argument('--do-not-filter-self',
                                help=(
                                    'If this flag is set, then the current instance will not be included. ie, only'
@@ -52,7 +52,7 @@ class FindAwsPeers(object):
 
         return cls(
             instance_id=cli_options.instance_id,
-            filters=cli_options.filters,
+            filters=None,  # cli_options.filters,
             region=cli_options.region,
             filter_self=cli_options.filter_self,
             session=credentials.create_session()

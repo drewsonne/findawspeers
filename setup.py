@@ -1,10 +1,10 @@
 from setuptools import find_packages, setup
 
-__version__ = '1.4.1'
+__version__ = '1.0.0'
 
 setup(
     name='findawspeers',
-    version='0.1.1',
+    version=__version__,
     packages=find_packages(),
     install_requires=['typing', 'aws-auth-helper', 'boto'],
     url='https://github.com/drewsonne/findawspeers',
